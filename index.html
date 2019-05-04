@@ -11,21 +11,29 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Put something in!</h1>
+    <input id="input" type = "text">
+    <button onclick="gen()">Push it in...</button>
     <p id = "result"></p>
 
     <!-- Optional JavaScript -->
     <script>
     
-    var number = Math.floor(Math.random() * (4 - 1)) + 1;
+    function gen() {
+     var number = Math.floor(Math.random() * (4 - 1)) + 1;
+     var text; 
+     
+      if (number === 1) {
+        text = "one";
+      } else if (number === 2) {
+        text = "two";
+      } else {
+        text = "three";
+      }
 
-    if (number === 1) {
-      document.getElementById("result").innerHTML = "one";
-    } else if (number === 2) {
-      document.getElementById("result").innerHTML = "two";
-    } else {
-      document.getElementById("result").innerHTML = "three";
+      document.getElementById("result").innerHTML = text;
     }
+
     </script>
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

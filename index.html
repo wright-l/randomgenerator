@@ -12,6 +12,7 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
+    <p id = "result"></p>
 
     <!-- Optional JavaScript -->
     <script>
@@ -19,11 +20,11 @@
     var number = Math.floor(Math.random() * (4 - 1)) + 1;
 
     if (number === 1) {
-      document.write("one");
+      document.getElementById("result").innerHTML = "one";
     } else if (number === 2) {
-      document.write("two");
+      document.getElementById("result").innerHTML = "two";
     } else {
-      document.write("three");
+      document.getElementById("result").innerHTML = "three";
     }
     </script>
     
